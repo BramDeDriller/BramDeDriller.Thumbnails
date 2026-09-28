@@ -46,25 +46,4 @@ const toggleBtn = document.getElementById('toggle-btn');
 
 
 
-$(document).ready(function() {
 
-    $("a[href^='#']").on('click', function(event) {
-
-        if (this.hash !== "") {
-
-            event.preventDefault();
-
-            var hash = this.hash;
-            var target = $(hash);
-
-            if (target.length) {
-                $('html, body').animate({
-                    scrollTop: target.offset().top
-                }, 800, function() {
-                    window.location.hash = hash;
-                });
-            }
-        }
-    });
-
-});
