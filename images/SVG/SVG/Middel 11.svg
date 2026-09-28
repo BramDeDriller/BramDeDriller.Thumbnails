@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Laag_2" data-name="Laag 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80.52 95.03">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #893700;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        fill: #f46e03;
+      }
+    </style>
+  </defs>
+  <g id="Laag_1-2" data-name="Laag 1">
+    <g>
+      <g>
+        <rect class="cls-2" x="8.12" y="1.24" width="50.37" height="45.04" transform="translate(-1.16 1.71) rotate(-2.9)"/>
+        <g id="neus">
+          <polygon class="cls-1" points="37.34 31.78 30.35 32.13 30.49 34.94 28.22 35.06 28.39 38.55 26.12 38.66 26.24 40.99 26.36 43.32 29.89 43.14 29.77 40.82 32.73 40.67 32.61 38.34 35.39 38.2 35.24 35.39 37.52 35.27 37.34 31.78"/>
+          <polygon class="cls-3" points="37.22 29.31 30.23 29.67 30.37 32.61 28.1 32.72 28.29 36.38 26.01 36.5 26.13 38.94 26.26 41.38 29.79 41.2 29.67 38.76 32.63 38.61 32.5 36.17 35.28 36.03 35.13 33.09 37.4 32.97 37.22 29.31"/>
+        </g>
+        <rect x="17.15" y="22.09" width="9.03" height="9.03" transform="translate(-1.32 1.13) rotate(-2.9)"/>
+        <rect x="40.33" y="20.92" width="9.03" height="9.03" transform="translate(-1.23 2.3) rotate(-2.9)"/>
+      </g>
+      <rect class="cls-2" x="22.06" y="54.95" width="32.24" height="21.63" transform="translate(-8.94 6.07) rotate(-8.15)"/>
+      <rect class="cls-2" x="62.27" y="36.02" width="11.65" height="23.01" transform="translate(57.35 -34.82) rotate(47.65)"/>
+      <rect class="cls-2" x="3.26" y="54.26" width="11.65" height="23.01" transform="translate(-2.5 131.15) rotate(-162.09)"/>
+      <polygon class="cls-2" points="37.89 95.03 37.15 81.95 22.77 83.43 23.09 95.03 37.89 95.03"/>
+      <polygon class="cls-2" points="55.74 95.03 59.28 84.35 45.89 78.76 39.97 95.03 55.74 95.03"/>
+    </g>
+  </g>
+</svg>

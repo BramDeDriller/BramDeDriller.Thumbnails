@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Laag_2" data-name="Laag 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 373.12 202.67">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #893700;
+      }
+
+      .cls-2, .cls-3 {
+        fill: #fff;
+      }
+
+      .cls-4 {
+        fill: #f46e03;
+      }
+
+      .cls-3 {
+        font-family: Minecraft, Minecraft;
+        font-size: 20px;
+      }
+    </style>
+  </defs>
+  <g id="Laag_1-2" data-name="Laag 1">
+    <g>
+      <rect width="373.12" height="202.67"/>
+      <g>
+        <rect class="cls-2" x="159.76" y="54.13" width="50.37" height="45.04" transform="translate(12.02 -24.24) rotate(7.75)"/>
+        <g id="neus">
+          <polygon class="cls-1" points="187.43 85.28 180.5 84.34 180.12 87.12 177.86 86.81 177.39 90.28 175.13 89.97 174.82 92.28 174.5 94.59 178.01 95.07 178.32 92.76 181.26 93.16 181.57 90.85 184.33 91.22 184.71 88.44 186.96 88.75 187.43 85.28"/>
+          <polygon class="cls-4" points="187.77 82.83 180.83 81.89 180.43 84.8 178.18 84.5 177.68 88.13 175.43 87.82 175.1 90.24 174.77 92.67 178.27 93.14 178.6 90.72 181.54 91.12 181.87 88.7 184.62 89.07 185.02 86.16 187.27 86.46 187.77 82.83"/>
+        </g>
+        <rect x="168.47" y="72.79" width="9.03" height="9.03" transform="translate(12 -22.62) rotate(7.75)"/>
+        <rect x="191.47" y="75.92" width="9.03" height="9.03" transform="translate(12.63 -25.69) rotate(7.75)"/>
+      </g>
+      <rect class="cls-2" x="170.79" y="108.86" width="32.24" height="21.63" transform="translate(-15.07 27.7) rotate(-8.15)"/>
+      <rect class="cls-2" x="207.09" y="104.71" width="11.65" height="23.01" transform="translate(446.87 180.3) rotate(166.69)"/>
+      <polygon class="cls-2" points="186.62 148.93 185.88 135.85 171.5 137.33 171.81 148.93 186.62 148.93"/>
+      <polygon class="cls-2" points="204.47 148.93 208.01 138.25 194.62 132.66 188.69 148.93 204.47 148.93"/>
+      <polygon class="cls-2" points="160.25 97.87 153.62 112.91 164.28 117.61 172.27 99.5 160.25 97.87"/>
+      <text class="cls-3" transform="translate(220.21 68.3) rotate(11.33) scale(.83 1)"><tspan x="0" y="0">?</tspan></text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,651 @@
+
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    overflow-x: hidden;
+    background: #ffffff;
+}
+
+/* ===================== NAV ===================== */
+nav.navigatieLogoMidden {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    padding: 25px 40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background: transparent;
+    color: rgb(0, 0, 0);
+   background-color: #ffffff;
+    
+}
+
+/* Linker en rechter menu */
+.navigatieLogoMidden > ul {
+    display: flex;
+    list-style: none;
+    gap: 8px;
+}
+
+.navigatieLogoMidden > ul > li {
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    transition: opacity 0.3s;
+    font-weight: 400;
+}
+
+.navigatieLogoMidden > ul > li:hover {
+    opacity: 0.7;
+}
+
+/* Linker menu naar rechts duwen */
+.first {
+    justify-content: flex-end;
+}
+
+/* Rechter menu naar links duwen */
+.second {
+    justify-content: flex-start;
+}
+
+/* Logo in het midden */
+.logo-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 30px;
+}
+
+.logonav {
+    width: 50px;
+    height: auto;
+    display: block;
+}
+
+/* ===================== SPLIT HEADER ===================== */
+.split-header {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+
+.panel {
+    width: 50%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Foto's beter in beeld (niet te ingezoomd) */
+.product-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    display: block;
+}
+
+/* Tekst onderaan */
+.panel-content {
+    position: absolute;
+    bottom: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: white;
+    z-index: 10;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.panel-content h1 {
+    font-size: 2.8rem;
+    font-weight: 400;
+    letter-spacing: 8px;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+}
+
+.panel-content p {
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    margin-bottom: 24px;
+    opacity: 0.9;
+}
+
+/* Knop */
+.btn {
+    display: inline-block;
+    background: rgba(255, 174, 0, 0.95);
+    color: white;
+    padding: 13px 34px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 174, 0, 0.95);
+}
+
+.btn:hover {
+    background: transparent;
+    color: rgb(255, 255, 255);
+}
+
+/* Donkere gradient onderaan voor leesbaarheid */
+.panel::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top, 
+        rgba(0,0,0,0.65) 0%, 
+        rgba(0,0,0,0.25) 35%, 
+        transparent 65%
+    );
+    pointer-events: none;
+}
+
+/* ===================== RESPONSIVE ===================== */
+@media (max-width: 900px) {
+    .split-header {
+        flex-direction: column;
+    }
+
+    .panel {
+        width: 100%;
+        height: 50vh;
+    }
+
+    .panel-content h1 {
+        font-size: 2rem;
+        letter-spacing: 4px;
+    }
+
+    nav.navigatieLogoMidden {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding: 15px 20px;
+        background: rgba(0,0,0,0.5);
+        text-align: center;
+    }
+
+    .first, .second {
+        justify-content: center;
+    }
+
+    .logo-link {
+        order: -1;
+        padding: 0;
+    }
+}
+
+    /* Loader */
+
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999999999999999;
+  transition: opacity 0.6s ease;
+}
+
+.loader-content {
+  text-align: center;
+}
+
+.logo-loader {
+    width: 50px;
+  height: 50px;
+  margin: 0;
+  letter-spacing: -2px;
+  margin-bottom: 20px;
+}
+
+.loading-text {
+  font-size: 1.8rem;
+  color: #ffffff;
+  margin: 10px 0 30px;
+  font-weight: 600;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #ffffff;
+  border-top: 4px solid rgb(0, 0, 0);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+/* =========== main ========== */
+
+
+    .MAIN{
+    height: 100vh;
+    
+    }
+
+    .mainH1{
+      color: rgba(0, 0, 0, 0.95);
+      font-size: 4.5rem;
+      text-transform: uppercase;
+      display: grid;
+      justify-items: center;
+      padding-top: 10vw;
+     padding-bottom: 3vw;
+      font-family: "Barlow", sans-serif;
+     font-style: normal;
+    }
+    
+
+
+
+    .thumbnail-container {
+      width: 600px;
+      height: 337px;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .thumbnail-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(45deg, rgba(255, 174, 0, 0.95), #ffed62);
+      /* display: flex;
+      /* align-items: flex-end;
+      justify-content: flex-start; */ 
+      
+      align-items: flex-end;
+      justify-content: flex-start;
+      padding: 25px;
+      
+
+      overflow: hidden;
+      transition: transform 0.8s cubic-bezier(0.7, 0, 0.3, 1);
+      z-index: 2;
+      transform: translateX(-100%);
+    }
+
+    .overlay::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(253, 245, 3, 0.271);
+      filter: blur(12px);
+      z-index: -1;
+    }
+
+    .text {
+      z-index: 3;
+      /* line-height: 1.1; */
+    }
+
+    .text  {
+      color: #ffffff;
+       font-family: "Barlow", sans-serif;
+      font-weight: 900;
+      font-style: normal;
+      font-weight: normal;
+      margin-bottom: 4px;
+      font-size: 25px;
+      
+    }
+
+   .smp {
+      
+      color: #ffffff;
+       font-family: "Barlow", sans-serif;
+      font-weight: 500;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 30;
+    }
+
+    .thumbnail-container:hover .overlay {
+      transform: translateX(0);
+    }
+
+    .thumbnail-container:hover img {
+      transform: scale(1.05);
+    }
+
+
+    
+.row {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+
+    .thumbnail-container {
+      position: relative;
+    }
+
+    .see-more-btn {
+      display: block;
+      margin: 30px auto;
+      padding: 14px 40px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #fff;
+      background: linear-gradient(45deg, rgba(255, 174, 0, 0.95), #ffed62);
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(94, 100, 0, 0.4);
+      transition: all 0.3s;
+    }
+
+    .see-more-btn:hover {
+      color: #000000;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(255, 208, 0, 0.467);
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+
+
+    aside{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+
+}
+
+.TekstHeader {
+     font-family: "Barlow", sans-serif;
+     font-weight: 300;
+     
+     font-style: normal;
+    text-align: center;
+    padding-top:20vw;
+    color: #000000;
+}
+
+.SixSeven{
+   color:  rgba(255, 174, 0, 0.95); 
+}
+
+.TekstHeader h1 {
+    color:  rgba(255, 174, 0, 0.95);
+    font-size: 4.5rem;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.TekstHeader h3 {
+    font-size: 1.8rem;
+    margin: 0.5rem 0;
+    opacity: 0.9;
+}
+
+.TekstHeader H5{
+    line-height: 30px;
+    max-width: 650px;
+    margin: 0 auto;
+    opacity: 0.85;
+}
+
+/* ==========profielfoto + glow ====== */
+
+
+.grootprf {
+    width: 40vh;
+    height: 40vh;
+    display: grid;
+    place-items: center;
+    margin: 15vw auto;           /* meer ruimte boven + automatisch centreren */
+    position: relative;
+    
+    /* Extra centrering zekerheid */
+    align-self: center;
+    justify-self: center;
+}
+
+/* Achterste grote blauwe glow */
+.grootprf::before {
+    content: '';
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    background: radial-gradient(circle,  rgba(255, 174, 0, 0.95) 5%, transparent 55%);
+    border-radius: 50%;
+    z-index: -2;
+    animation: breathe 3s ease-in-out infinite;
+    filter: blur(30px);
+}
+
+/* Voorste intensere glow laag */
+.grootprf::after {
+    content: '';
+    position: absolute;
+    width: 115%;
+    height: 115%;
+    background: radial-gradient(circle,  rgba(255, 174, 0, 0.95) 0%, transparent 60%);
+    border-radius: 50%;
+    z-index: -1;
+    animation: breathe 3s ease-in-out infinite;
+    animation-delay: 0.6s;
+    filter: blur(22px);
+}
+
+/* De avatar foto */
+.grootprf img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    position: relative;
+    z-index: 2;
+    box-shadow: 
+        0 0 50px  rgba(255, 174, 0, 0.95),
+        0 0 80px  rgba(255, 204, 94, 0.95),
+        inset 0 0 35px rgba(255,255,255,0.2);
+}
+
+/* Ademende animatie (opvallender) */
+@keyframes breathe {
+    0%, 100% {
+        transform: scale(0.85);
+        opacity: 0.6;
+    }
+    50% {
+        transform: scale(1.18);
+        opacity: 1;
+    }
+}
+
+/* ========== footer ========= */
+
+#Contact {
+  background: linear-gradient(180deg, #1a1a1a 0%, #222222 100%);
+  color: #ffffff;
+  padding: 80px 20px 70px;
+  text-align: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+#Contact::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #f5a623, transparent);
+  border-radius: 2px;
+}
+
+.contact-content {
+  max-width: 680px;
+  margin: 0 auto 50px;
+}
+
+.section-title {
+  color: #f5a623;
+  font-size: 2.6rem;
+  font-weight: 800;
+  letter-spacing: 6px;
+  margin: 0 0 14px;
+  text-transform: uppercase;
+  text-shadow: 0 0 30px rgba(245, 166, 35, 0.35);
+}
+
+.section-subtitle {
+  color: #e8e8e8;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 0 0 22px;
+  letter-spacing: 0.5px;
+}
+
+.contact-text {
+  color: #b8b8b8;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  margin: 0;
+}
+
+.discord-card {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(245, 166, 35, 0.18);
+  border-radius: 20px;
+  padding: 32px 48px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.discord-card:hover {
+  border-color: rgba(245, 166, 35, 0.45);
+  box-shadow: 0 15px 50px rgba(245, 166, 35, 0.15);
+  transform: translateY(-4px);
+}
+
+.discord-label {
+  color: #f5a623;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin: 0;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+
+/* The clickable name */
+.discord-username {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 1.7rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  padding: 6px 16px;
+  border-radius: 10px;
+  transition: all 0.25s ease;
+  font-family: inherit;
+}
+
+.discord-username:hover {
+  color: #f5a623;
+  background: rgba(245, 166, 35, 0.1);
+}
+
+/* "Copied!" feedback */
+.copy-feedback {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #f5a623;
+  color: #111;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 20px;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.copy-feedback.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Discord Logo */
+.discord-logo-link {
+  color: #ffffff;
+  margin-top: 6px;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.discord-logo-link:hover {
+  color: #f5a623;
+  background: rgba(245, 166, 35, 0.12);
+  transform: scale(1.12);
+  box-shadow: 0 0 25px rgba(245, 166, 35, 0.35);
+}
+
+.discord-logo {
+  width: 44px;
+  height: 44px;
+}
