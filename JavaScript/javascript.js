@@ -1,4 +1,28 @@
 
+
+$(document).ready(function () {
+
+    $("a[href^='#']").on("click", function (event) {
+
+        if (this.hash !== "") {
+            event.preventDefault();
+
+            const hash = this.hash;
+            const target = $(hash);
+
+            if (target.length) {
+                $("html, body").animate({
+                    scrollTop: target.offset().top
+                }, 800);
+            }
+        }
+
+    });
+
+});
+
+
+
 window.addEventListener('load', () => {
     const loader = document.getElementById('loader');
     
